@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Фильмотека
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ВНИМАНИЕ! Для использования на территории РФ потребуется включить VPN
 
-## Available Scripts
+Стек: React, Router, Redux, MUI, RTK Query.
+Используется бесплатный API: https://api.themoviedb.org/
 
-In the project directory, you can run:
+Приложение представляет собой картотеку фильмов.
+При входе требуется авторизация по токену.
+Токен можно получить на сайте https://developer.themoviedb.org/reference/intro/authentication.
+При входе данные сохраняются в куки.
 
-### `npm start`
+На главной странице по умолчанию выводится картотека фильмов с сортировкой по популярности.
+Пользователю доступны следующие фильтры:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   по названию фильма;
+-   сортировка по популярности / рейтингу;
+-   по году релиза;
+-   по жанрам (мультивыбор).
+    Перемещаться между страницами картотеки можно с помощью панели пагинации.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+При нажатии на карточку фильма происходит переход на страницу с деталями о фильме.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Фильмы можно добавлять в избранное (кнопка в форме звезды). Данные синхронизируются с сервером.
